@@ -1,0 +1,48 @@
+#!/usr/bin/python3.7
+
+from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+
+
+app = Flask(__name__, static_folder="resources", template_folder='template')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://lizcgddpvnxkgl:76f8c7dd9be0bfa3a41d564874bf8e7a2ee9efc9a91066e82d73a4d275ffa30c@ec2-54-83-82-187.compute-1.amazonaws.com:5432/d56t7mrb1mt1ff"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# engine = create_engine('postgresql+psycopg2://postgres:Harsh2776@localhost/users')
+
+db = SQLAlchemy(app)
+
+class Users(db.Model):
+    id = db.Column(db.Integer, primary_key = True, autoincrement=True)
+    name = db.Column(db.String(30))
+    phone = db.Column(db.Integer)
+    email = db.Column(db.String(50))
+    find = db.Column(db.String(20))
+    text = db.Column(db.String(200))
+
+@app.route('/')
+def landing():
+   return render_template('landing.html')
+
+
+@app.route('/thankyou', methods = ['POST'])
+def thankyou():
+    name = request.form['name']
+    phone = request.form['phone']
+    email = request.form['email']
+    find = request.form['find-us']
+    text = request.form['message']
+
+    data = Users(name=name, phone=phone, email=email, text=text)
+    db.session.add(data)
+    db.session.commit()
+
+    return redirect(url_for('landing'))
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html")
+
+if __name__ == '__main__':
+    app.run(debug=True)

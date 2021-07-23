@@ -1,0 +1,241 @@
+/*  Big tablets to 1200px (widths smaller than the 1140px row)  */
+
+@media only screen and (max-width: 1200px) {
+    .background-text-box {
+        width: 100%;
+        left :20%;
+        padding-left: 30%;
+    }
+
+    .row {
+        padding: 0 2%;
+    }
+    .rest-photo img {
+        height: 30vh;
+        width: 35vw;
+    }
+}
+
+
+/*  Small tablets to big tablets: from 768px to 1023px  */
+
+@media only screen and (max-width: 1023px) {
+    body {
+        font-size: 18px;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .logo{
+        margin-top: 26px;
+        height: 52px;
+    }
+    .main-nav{
+        font-size: 17px;
+        font-weight: bolder ;
+    }
+    .background-text-box {
+        width: 100%;
+    }
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .steps-box {
+        margin-top: 10px;
+    }
+    .steps-box:last-child {
+        margin-top: 10px;
+    }
+    .works-steps {
+        margin-bottom: 40px;
+    }
+    .works-step:last-of-type {
+        margin-bottom: 60px;
+    }
+    .app-screen {
+        width: 50%;
+    }
+    .icon-small {
+        width: 17px;
+        margin-right: 5px;
+    }
+    .city-feature {
+        font-size: 90%;
+    }
+    .plan-box {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .plan-price {
+        font-size: 250%;
+    }
+    .contact-form {
+        width: 80%;
+    }
+    .rest-photo img {
+        height: 20vh;
+        width: 25vw;
+    }
+    .section-rest_type{
+        padding-bottom: 0px;
+        margin-bottom: 54%;
+    }
+}
+
+
+/* Small phones to small tablets: from 481px to 767px */
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    section {
+        padding: 30px 0;
+    }
+    .row,
+    .background-text-box {
+        padding: 0 4%;
+    }
+    .col {
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+    .background-text-box {
+        left: 40%;
+        padding-left: 7%;
+    }
+    .menu-outline {
+        transform: translate(-2%, -30%);
+        color: #ccc5be;
+        font-size: 40px;
+    }
+    .main-nav {
+        display: none;
+    }
+    .mobile-nav-icon {
+        left: 85%;
+        position: absolute;
+        display: inline-block;
+    }
+    .main-nav {
+        float: left;
+        margin-top: 30px;
+        margin-left: 25px;
+    }
+    .main-nav li {
+        display: block;
+    }
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    .sticky .main-nav {
+        margin-top: 10px;
+    }
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0;
+    }
+    .sticky .mobile-nav-icon {
+        margin-top: 10px;
+    }
+    .sticky .mobile-nav-icon i {
+        color: #555;
+    }
+    h1 {
+        font-size: 180%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .app-screen {
+        width: 40%;
+    }
+    .section-rest_type {
+        margin-bottom: 130%;
+    }
+    .rest-photo img {
+        height: 30vh;
+        width: 35vw;
+    }
+    .section-citis h2 {
+        margin-top: 70%;
+    }
+    .section-rest_type{
+        padding-bottom: 0px;
+        margin-bottom: 110%;
+    }
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+    }
+    .works-step-right p {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .right-works-step div {
+        float: left;
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+    }
+    .works-step {
+        margin-bottom: 20px;
+    }
+    .works-step:last-of-type {
+        margin-bottom: 20px;
+    }
+    footer{
+        padding: 0px;
+        /* margin-left: 40px; */
+    }
+    #copyright{
+        padding-bottom: 20px;
+    }
+    .footer-nav{
+        padding-top: 20px;
+    }
+    .social{
+        padding-top: 0px;
+    }
+
+
+}
+
+
+/* Small phones: from 0 to 480px      */
+
+@media only screen and (max-width: 480px) {
+    section {
+        padding: 25px 0;
+    }
+    .logo {
+        height: 50px
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .rest-photo img {
+        height: 30vh;
+        width: 35vw;
+    }
+    .section-citis h2 {
+        margin-top: 0%;
+    }
+}
